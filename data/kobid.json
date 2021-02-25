@@ -1,0 +1,27 @@
+[
+    {
+        "jabatan": "Pembangunan",
+        "nama": " ",
+        "image": "./images/kabinet/pembangunan.jpg"
+    },
+    {
+        "jabatan": "kebersihan & kesehatan",
+        "nama": " ",
+        "image": "./images/kabinet/kebkes.jpg"
+    },
+    {
+        "jabatan": "Pemuda",
+        "nama": " ",
+        "image": "./images/kabinet/pemuda.jpg"
+    },
+    {
+        "jabatan": "Keamanan",
+        "nama": " ",
+        "image": "./images/kabinet/keamanan.jpg"
+    },
+    {
+        "jabatan": "Sosial & Budaya",
+        "nama": " ",
+        "image": "./images/kabinet/sosbud.jpg"
+    }
+]
