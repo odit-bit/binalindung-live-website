@@ -1,29 +1,33 @@
 import React from "react"
 import Styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
-// import { Link } from "gatsby"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons"
 import Typography from "@material-ui/core/Typography"
 
-// import { graphql } from 'gatsby'
+const FooterStyle = Styled.footer`
+background: #52b788 ;
+  footer {
+    // margin-top: auto;
+    text-align: center ;
+    padding: 1rem;  
 
-const FooterStyle = Styled.div`
-    footer {
-        text-align: center ;
-        padding: 1rem;
+  }
+  .icons {
+      display: inline-grid;
+      grid-template-columns: repeat(3, auto);
+      grid-gap: 10px;
     }
-    .icons {
-        display: inline-grid;
-        grid-template-columns: repeat(3, auto);
-        grid-gap: 10px;
-      }
-    .icons svg {
-        width: 60;
-        heigth: 60;
-        color: ${({ theme }) => theme.color.social_media_icons};
-      }
+  .icons svg {
+      width: 120;
+      heigth: 120;
+      color: ${({ theme }) => theme.color.social_media_icons};
+      :hover {
+            color: #06d6a0 ;
+            // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+    }
 `
 
 const Footer = () => {
@@ -56,12 +60,17 @@ const Footer = () => {
             <FontAwesomeIcon icon={faYoutube} />
           </a>
         </div>
-        <Typography>Sekretariat Rw-11 Binalindung</Typography>
+        <Typography></Typography>
         <Typography variant="body2" color="textSecondary">
+          {/* {"Copyright © "} */}
+          <span>Sekretariat Rw-11 Binalindung</span>
+          {"."}
+        </Typography>
+        {/* <Typography variant="body2" color="textSecondary">
           {"Copyright © "}
           <span>Gema Adhi Wibowo</span> {new Date().getFullYear()}
           {"."}
-        </Typography>
+        </Typography> */}
       </footer>
     </FooterStyle>
   )

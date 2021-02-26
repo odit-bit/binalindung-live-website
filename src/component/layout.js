@@ -7,15 +7,18 @@ import Header from "./header"
 import Footer from "./footer"
 
 import Paper from "@material-ui/core/Paper"
+import { Container } from "react-bootstrap"
 
 const LayoutStyle = Styled.div`
-    margin:0 auto;
-    max-width: 1200px;
-    min-height: 100vh;
-    // display: grid;
-    // padding: 1rem;
-    // justify-content: center;
-    // grid-template-rows: auto 1fr auto;
+display: flex;
+flex-direction: column;
+flex: 1;
+justify-content: space-between;
+position: relative;
+max-width: 1080px;
+margin: 0 auto; 
+min-height: 100vh
+
 `
 
 const Layout = ({ children }) => {
@@ -30,15 +33,15 @@ const Layout = ({ children }) => {
   // `)
   return (
     <React.Fragment>
-      <header>
-        <LayoutStyle>
-          <Header />
-          <Paper elevation={0}>
+      <LayoutStyle>
+        <Header />
+        <Paper elevation={0}>
+          <Container>
             <main>{children}</main>
-          </Paper>
-          <Footer />
-        </LayoutStyle>
-      </header>
+          </Container>
+        </Paper>
+        <Footer />
+      </LayoutStyle>
     </React.Fragment>
   )
 }

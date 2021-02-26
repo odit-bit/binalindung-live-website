@@ -12,16 +12,9 @@ import Row from "react-bootstrap/Row"
 // import Img from "gatsby-image"
 
 const PengurusStyle = Styled.div`
-  .content {
-    align-items: center;
-    // text-align: center;
-    margin:0 auto;
-  }
   div.row {
     display: flex;
     justify-content: center;
-    margin: 20px;
-    
   }
   figure.figure {
     margin:20px;

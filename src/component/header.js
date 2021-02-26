@@ -7,7 +7,7 @@ import { Navbar } from "react-bootstrap"
 import Nav from "react-bootstrap/Nav"
 
 const HeaderStyle = Styled.header`
-    background: #bad072;
+    background: #ffffff ;
     nav ul {
         margin: 0;
         padding: 0;
@@ -28,7 +28,8 @@ const HeaderStyle = Styled.header`
         // color: ${({ theme }) => theme.color.text};
         color: #2b331f ;
         :hover {
-            color: #666666 ;
+            color: #06d6a0 ;
+            // text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         }
     }
 `

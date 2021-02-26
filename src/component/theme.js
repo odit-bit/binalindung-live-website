@@ -4,9 +4,10 @@ import { Normalize } from "styled-normalize"
 
 const mainTheme = {
   color: {
-    background: "#e7e4e3",
+    background: "#ffffff",
     text: "black",
-    social_media_icons: "#b9b9b9",
+    social_media_icons: "#ffffff",
+    hover: "#06d6a0", //helper
   },
   fonts: {
     header: "Montserrat",
@@ -15,15 +16,20 @@ const mainTheme = {
 }
 
 const GlobalStyle = createGlobalStyle`
-    body {
-        background: ${({ theme }) => theme.color.background};
-        color: ${({ theme }) => theme.color.text};
-        // font-family: ${({ theme }) => theme.fonts.copy}, sans-serif; 
-    }
+  html {
+    height: 100%;
+  }
+  body {
+    background: ${({ theme }) => theme.color.background};
+    color: ${({ theme }) => theme.color.text};
+    // font-family: ${({ theme }) => theme.fonts.copy}, sans-serif; 
+    
+   
+  }
 
-    h1,h2,h3 {
-        // font-family: ${({ theme }) => theme.fonts.header}, sans-serif;
-    }
+  h1,h2,h3 {
+    font-family: ${({ theme }) => theme.fonts.header}, sans-serif;
+  }
 `
 
 const Theme = ({ children }) => {

@@ -1,22 +1,28 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import Styled from "styled-components"
+
+import SEO from "../component/seo"
+
+const ContentStyle = Styled.div`
+
+`
 
 const BlogPost = ({ data }) => {
   const post = data.allContentfulPost.edges[0].node
   //   console.log(post.photo.fluid.src)
   return (
-    <div>
+    <ContentStyle>
+      <SEO title={post.judul} />
       <h1>{post.judul}</h1>
-      <br></br>
-      <p>{post.id}</p>
-      <br></br>
-      <p>{post.deskripsi}</p>
-      <br></br>
-      <p>{post.tanggal}</p>
-      <br></br>
-      <Img fluid={post.photo.fluid}></Img>
-    </div>
+
+      <Img fixed={post.photo.fixed}></Img>
+
+      <p>{post.deskripsi.deskripsi}</p>
+      {/* <p>{post.tanggal}</p> */}
+      {/* <p>{post.id}</p> */}
+    </ContentStyle>
   )
 }
 export default BlogPost
@@ -28,11 +34,12 @@ export const query = graphql`
         node {
           id
           judul
-          deskripsi
-          tanggal
+          deskripsi {
+            deskripsi
+          }
           photo {
-            fluid(maxWidth: 300, quality: 50) {
-              ...GatsbyContentfulFluid_withWebp
+            fixed(width: 300) {
+              ...GatsbyContentfulFixed
             }
           }
         }
